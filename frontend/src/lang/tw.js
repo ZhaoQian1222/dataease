@@ -2209,7 +2209,8 @@ export default {
     defaultHomeLink: '默認為系統內置首頁',
     showFoot: '顯示登錄頁腳',
     footContent: '頁腳內容',
-    webFormat: '請輸入以[https://或http://]開頭的正確網址'
+    webFormat: '請輸入以[https://或http://]開頭的正確網址',
+    openHeadNavigationBar: '顯示頭部導航欄'
   },
   auth: {
     no_item_selected: '請在左側選擇組織、角色或用戶',

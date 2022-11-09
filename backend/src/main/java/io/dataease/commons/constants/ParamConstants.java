@@ -114,8 +114,9 @@ public interface ParamConstants {
         DS_CHECK_INTERVAL_TYPE("basic.dsCheckIntervalType"),
         DEFAULT_LOGIN_TYPE("basic.loginType"),
         OPEN_HOME_PAGE("ui.openHomePage"),
-
         OPEN_MARKET_PAGE("ui.openMarketPage"),
+
+        OPEN_HEAD_NAVIGATION_BAR("ui.openHeadNavigationBar"),
         TEMPLATE_MARKET_ULR("basic.templateMarketUlr"),
 
         LOGIN_LIMIT_LIMITTIMES("loginlimit.limitTimes"),

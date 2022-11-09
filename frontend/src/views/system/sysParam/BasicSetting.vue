@@ -181,6 +181,23 @@
           >{{ $t("commons.no") }}</el-radio>
         </el-radio-group>
       </el-form-item>
+
+      <el-form-item
+        :label="
+          $t('commons.yes') + $t('commons.no') + $t('display.openHeadNavigationBar')
+        "
+      >
+        <el-radio-group v-model="formInline.openHeadNavigationBar">
+          <el-radio
+            label="true"
+            size="mini"
+          >{{ $t("commons.yes") }}</el-radio>
+          <el-radio
+            label="false"
+            size="mini"
+          >{{ $t("commons.no") }}</el-radio>
+        </el-radio-group>
+      </el-form-item>
     </el-form>
   </div>
 </template>
@@ -342,6 +359,12 @@ export default {
           paramValue: this.formInline.openMarketPage,
           type: 'text',
           sort: 14
+        },
+        {
+          paramKey: 'ui.openHeadNavigationBar',
+          paramValue: this.formInline.openHeadNavigationBar,
+          type: 'text',
+          sort: 20
         },
 
         {

@@ -59,9 +59,11 @@ public class SystemParameterService {
         List<SystemParameter> paramList = this.getParamList("basic");
         List<SystemParameter> homePageList = this.getParamList("ui.openHomePage");
         List<SystemParameter> marketPageList = this.getParamList("ui.openMarketPage");
+        List<SystemParameter> headNavigationBarPageList = this.getParamList("ui.openHeadNavigationBar");
         List<SystemParameter> loginLimitList = this.getParamList("loginlimit");
         paramList.addAll(homePageList);
         paramList.addAll(marketPageList);
+        paramList.addAll(headNavigationBarPageList);
         paramList.addAll(loginLimitList);
         BasicInfo result = new BasicInfo();
         result.setOpenHomePage("true");
@@ -86,6 +88,10 @@ public class SystemParameterService {
                 if (StringUtils.equals(param.getParamKey(), ParamConstants.BASIC.OPEN_MARKET_PAGE.getValue())) {
                     boolean open = StringUtils.equals("true", param.getParamValue());
                     result.setOpenMarketPage(open ? "true" : "false");
+                }
+                if (StringUtils.equals(param.getParamKey(), ParamConstants.BASIC.OPEN_HEAD_NAVIGATION_BAR.getValue())) {
+                    boolean open = StringUtils.equals("true", param.getParamValue());
+                    result.setOpenHeadNavigationBar(open ? "true" : "false");
                 }
                 if (StringUtils.equals(param.getParamKey(), ParamConstants.BASIC.TEMPLATE_MARKET_ULR.getValue())) {
                     result.setTemplateMarketUlr(param.getParamValue());

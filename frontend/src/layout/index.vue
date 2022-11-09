@@ -5,7 +5,7 @@
   >
     <licbar />
     <topbar
-      v-if="!fullHeightFlag && finishLoad"
+      v-if="!fullHeightFlag && finishLoad && openHeadNavigationBar"
       :show-tips="showTips"
     />
 
@@ -62,7 +62,8 @@ import DeContainer from '@/components/dataease/DeContainer'
 import DeAsideContainer from '@/components/dataease/DeAsideContainer'
 import bus from '@/utils/bus'
 
-import { needModifyPwd, removePwdTips } from '@/api/user'
+import {getUIinfo, needModifyPwd, removePwdTips} from '@/api/user'
+import {format} from "@/utils/formatUi";
 
 export default {
   name: 'Layout',
@@ -82,7 +83,8 @@ export default {
       showTips: false,
       finishLoad: false,
       buttonDisable: false,
-      sideWidth: ''
+      sideWidth: '',
+      openHeadNavigationBar: true
     }
   },
   computed: {
@@ -106,10 +108,12 @@ export default {
         return {
           'height': '100vh!important'
         }
-      } else {
+      } else if (this.openHeadNavigationBar) {
         return {
           'paddingTop': '56px'
-        }
+        };
+      } else {
+        return {};
       }
     },
     classObj() {
@@ -127,6 +131,18 @@ export default {
       this.finishLoad = true
     }).catch(e => {
       this.finishLoad = true
+    });
+
+    getUIinfo().then(response => {
+      const { data } = response
+      const uiInfo = format(data)
+      if (uiInfo["ui.openHeadNavigationBar"]?.paramValue == 'false') {
+        this.openHeadNavigationBar = false;
+      } else {
+        this.openHeadNavigationBar = true;
+      }
+    }).catch(e => {
+      this.openHeadNavigationBar = true
     })
   },
   mounted() {

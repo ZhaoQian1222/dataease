@@ -2209,7 +2209,8 @@ export default {
     defaultHomeLink: '默认为系统内置首页',
     showFoot: '显示登录页脚',
     footContent: '页脚内容',
-    webFormat: '请输入以[https://或http://]开头的正确网址'
+    webFormat: '请输入以[https://或http://]开头的正确网址',
+    openHeadNavigationBar: '显示头部导航栏'
   },
   auth: {
     no_item_selected: '请在左侧选择组织、角色或用户',
