@@ -41,6 +41,8 @@
 import ChartStyle from '@/views/chart/view/ChartStyle'
 import { mapState } from 'vuex'
 import bus from '@/utils/bus'
+import '@/dataease.css'
+
 export default {
   name: 'ChartStyleBatchSet',
   components: { ChartStyle },
@@ -128,11 +130,11 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 56px);
+    height:  var(--generalHeight, calc(100vh - 56px));
   }
 
   .batch-opt-main{
-    height:  calc(100vh - 56px);
+    height:  var(--generalHeight, calc(100vh - 56px));
     overflow-y: hidden;
     width: 100%;
     border-left: 1px solid #E6E6E6

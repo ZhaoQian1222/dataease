@@ -295,6 +295,7 @@ import { dsGroupTree } from '@/api/dataset/dataset'
 import { appApply, appEdit, groupTree } from '@/api/panel/panel'
 import { deepCopy } from '@/components/canvas/utils/utils'
 import { hasDataPermission } from '@/utils/permission'
+import '@/dataease.css'
 
 export default {
   name: 'DsForm',
@@ -1245,7 +1246,7 @@ export default {
   .de-ds-cont {
     display: flex;
     width: 100%;
-    height: calc(100% - 56px);
+    height: var(--appExportHeight, calc(100% - 56px));
     overflow-y: auto;
     overflow-x: hidden;
     padding: 12px 24px 24px 24px;
@@ -1317,7 +1318,7 @@ export default {
   .de-ds-cont {
     display: flex;
     width: 100%;
-    height: calc(100% - 56px);
+    height: var(--appExportHeight, calc(100% - 56px));
     padding: 12px 24px 24px 24px;
     background: #f5f6f7;
 

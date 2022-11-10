@@ -15,6 +15,8 @@
 <script>
 import DeHorizontalDragBar from './dragbar/DeLeft2RightDragBar'
 import { getLayout } from '@/utils/LayoutUtil'
+import '@/dataease.css'
+
 export default {
   name: 'DeAsideContainer',
   components: { DeHorizontalDragBar },
@@ -68,7 +70,7 @@ export default {
     border-radius: 2px;
     box-sizing: border-box;
     background-color: var(--SiderBG, #FFF);
-    height: calc(100vh - 56px);
+    height: var(--generalHeight, calc(100vh - 56px));
     border-right: 0px;
     position: relative;
     padding-bottom: 50px;

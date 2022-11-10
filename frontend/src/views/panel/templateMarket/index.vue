@@ -149,6 +149,7 @@ import { groupTree, panelSave } from '@/api/panel/panel'
 import { DEFAULT_COMMON_CANVAS_STYLE_STRING } from '@/views/panel/panel'
 import MarketPreview from '@/views/panel/templateMarket/component/MarketPreview'
 import elementResizeDetectorMaker from 'element-resize-detector'
+import '@/dataease.css'
 
 export default {
   name: 'TemplateMarket',
@@ -326,7 +327,7 @@ export default {
     text-align: center;
     border-radius: 4px;
     padding: 0 12px 24px 12px;
-    height: calc(100vh - 190px)!important;
+    height: var(--marketHeight, calc(100vh - 190px))!important;
     overflow-x: hidden;
     overflow-y: auto;
     background-color: var(--ContentBG,#ffffff);
@@ -385,7 +386,7 @@ export default {
   }
   .outer-body{
     width: 100%;
-    height: calc(100vh - 56px);
+    height: var(--generalHeight, calc(100vh - 56px));
     background-color: var(--MainBG,#f5f6f7);
   }
 

@@ -218,6 +218,7 @@ import { listApiDatasource, post, isKettleRunning } from '@/api/dataset/dataset'
 import { dbPreview, engineMode } from '@/api/system/engine'
 import cancelMix from './cancelMix'
 import msgCfm from '@/components/msgCfm/index'
+import '@/dataease.css'
 
 export default {
   name: 'AddApi',
@@ -459,7 +460,7 @@ export default {
 
   .drag-left {
     position: absolute;
-    height: calc(100vh - 56px);
+    height: var(--generalHeight, calc(100vh - 56px));
     width: 2px;
     top: 0;
     z-index: 5;

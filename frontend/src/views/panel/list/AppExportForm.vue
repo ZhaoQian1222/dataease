@@ -92,6 +92,7 @@
 import i18n from '@/lang/index'
 import deTextarea from '@/components/deCustomCm/deTextarea.vue'
 import msgCfm from '@/components/msgCfm'
+import '@/dataease.css'
 
 export default {
   name: 'AppExportForm',
@@ -179,7 +180,7 @@ export default {
 
 .app-export{
   width: 100%;
-  height: calc(100% - 56px);
+  height: var(--appExportHeight, calc(100% - 56px));
 }
 
 .app-export-bottom{

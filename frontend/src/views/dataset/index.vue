@@ -32,6 +32,7 @@ import ViewTable from './data/ViewTable'
 import FieldEdit from './data/FieldEdit'
 import { removeClass } from '@/utils'
 import { checkCustomDs } from '@/api/dataset/dataset'
+import '@/dataease.css'
 export default {
   name: 'DataSet',
   components: {
@@ -120,14 +121,14 @@ export default {
 
 <style scoped>
 .ms-aside-container {
-  height: calc(100vh - 56px);
+  height: var(--generalHeight, calc(100vh - 56px));
   padding: 0 0;
   min-width: 260px;
   max-width: 460px;
 }
 
 .ms-main-container {
-  height: calc(100vh - 56px);
+  height: var(--generalHeight, calc(100vh - 56px));
   padding: 10px 15px 0 15px;
 }
 </style>

@@ -54,6 +54,7 @@ import PanelViewShow from '../list/PanelViewShow'
 import ShareTree from '../GrantAuth/shareTree'
 import Enshrine from '../enshrine/index'
 import { pluginTypes } from '@/api/chart/chart'
+import '@/dataease.css'
 
 export default {
   name: 'PanelMain',
@@ -149,13 +150,13 @@ export default {
 
 <style scoped>
   .ms-aside-container {
-    height: calc(100vh - 56px);
+    height: var(--generalHeight, calc(100vh - 56px));
     padding: 0px;
     min-width: 260px;
     max-width: 460px;
   }
   .ms-main-container {
-    height: calc(100vh - 56px);
+    height: var(--generalHeight, calc(100vh - 56px));
     padding: 0px;
   }
   .tab-panel{

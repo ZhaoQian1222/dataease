@@ -529,7 +529,7 @@ import { adaptCurThemeCommonStyle } from '@/components/canvas/utils/style'
 import eventBus from '@/components/canvas/utils/eventBus'
 import DeCanvas from '@/components/canvas/DeCanvas'
 import TextAttr from '@/components/canvas/components/TextAttr'
-
+import '@/dataease.css'
 export default {
   name: 'PanelEdit',
   components: {
@@ -1407,14 +1407,14 @@ export default {
 
 <style scoped>
 .ms-aside-container {
-  height: calc(100vh - 56px);
+  height: var(--generalHeight, calc(100vh - 56px));
   max-width: 60px;
   border: none;
   width: 60px;
 }
 
 .ms-main-container {
-  height: calc(100vh - 56px);
+  height: var(--generalHeight, calc(100vh - 56px));
 }
 
 .de-header {
@@ -1450,7 +1450,7 @@ export default {
 .leftPanel {
   width: 100%;
   max-width: 300px;
-  height: calc(100vh - 56px);
+  height: var(--generalHeight, calc(100vh - 56px));
   position: fixed;
   top: 91px;
   left: 60px;
@@ -1545,19 +1545,19 @@ export default {
 }
 
 .canvas_main_content {
-  height: calc(100vh - 56px);
+  height: calc(100vh);
 }
 
 .this_canvas {
   width: 100%;
-  height: calc(100vh - 56px);
+  height: var(--generalHeight, calc(100vh - 56px));
   overflow-x: hidden;
   overflow-y: auto;
   background-size: 100% 100% !important;
 }
 
 .el-main {
-  height: calc(100vh - 56px);
+  height: var(--generalHeight, calc(100vh - 56px));
   padding: 0 !important;
   overflow: auto;
   position: relative;

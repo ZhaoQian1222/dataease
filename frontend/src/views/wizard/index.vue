@@ -137,6 +137,7 @@ import { blogLastActive } from '@/api/wizard/wizard'
 import WizardCard from '@/views/wizard/wizardCard'
 import VideoCard from '@/views/wizard/videoCard'
 import WizardCardEnterprise from '@/views/wizard/wizardCardEnterprise'
+import '@/dataease.css'
 
 export default {
   name: 'Wizard',
@@ -479,7 +480,7 @@ export default {
 
 .main_container_outer {
   width: 100%;
-  height: calc(100vh - 56px);
+  height: var(--generalHeight, calc(100vh - 56px));
   background-color: var(--MainBG, #f5f6f7);
   overflow: auto;
 }

@@ -558,7 +558,7 @@ export default {
   }
 
   .attr-style {
-    height: calc(100vh - 56px - 60px - 40px - 40px);
+    height:  var(--attrStyleHeight, calc(100vh - 56px - 60px - 40px - 40px));
   }
 
   .blackTheme .attr-style {

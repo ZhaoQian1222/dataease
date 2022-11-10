@@ -38,10 +38,10 @@ $leftMenuText: #1e212a;
 $leftMenuTextActive: $--color-primary;
 
 
-$colorBg: rgba(10, 123, 224, .1); 
+$colorBg: rgba(10, 123, 224, .1);
 $sideBarWidth: 210px;
 $topBarHeight: 56px;
-$contentHeight: calc(100vh - 56px);
+$contentHeight: var(--generalHeight, calc(100vh - 56px));
 
 
 :export {

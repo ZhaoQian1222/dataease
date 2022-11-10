@@ -125,7 +125,7 @@ import AppTemplateLog from '@/views/panel/appTemplateMarket/log'
 import AppTemplateContent from '@/views/panel/appTemplate/AppTemplateContent'
 import AppMarketPreview from '@/views/panel/appTemplateMarket/component/AppMarketPreview'
 import AppTemplateApply from '@/views/panel/appTemplate/component/AppTemplateApply'
-
+import '@/dataease.css'
 export default {
   name: 'AppTemplateMarket',
   components: { AppTemplateApply, AppMarketPreview, AppTemplateContent, AppTemplateLog },
@@ -279,7 +279,7 @@ export default {
 
 <style lang="scss" scoped>
 .template-main-content {
-  height: calc(100vh - 190px) !important;
+  height: var(--marketHeight, calc(100vh - 190px))!important;
 }
 
 .template-main {
@@ -352,7 +352,7 @@ export default {
 
 .outer-body {
   width: 100%;
-  height: calc(100vh - 56px);
+  height: var(--generalHeight, calc(100vh - 56px));
   background-color: var(--MainBG, #f5f6f7);
 }
 

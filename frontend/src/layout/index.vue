@@ -61,7 +61,7 @@ import DeMainContainer from '@/components/dataease/DeMainContainer'
 import DeContainer from '@/components/dataease/DeContainer'
 import DeAsideContainer from '@/components/dataease/DeAsideContainer'
 import bus from '@/utils/bus'
-
+import '@/dataease.css'
 import {getUIinfo, needModifyPwd, removePwdTips} from '@/api/user'
 import {format} from "@/utils/formatUi";
 
@@ -113,6 +113,11 @@ export default {
           'paddingTop': '56px'
         };
       } else {
+        document.getElementsByTagName('body')[0].style.setProperty('--marketHeight', 'calc(100vh - 134px)');
+        document.getElementsByTagName('body')[0].style.setProperty('--generalHeight', 'calc(100vh)');
+        document.getElementsByTagName('body')[0].style.setProperty('--panelHeight', 'calc(100vh - 15px - 26px - 25px - 43px)');
+        document.getElementsByTagName('body')[0].style.setProperty('--appExportHeight', 'calc(100%)');
+        document.getElementsByTagName('body')[0].style.setProperty('--attrStyleHeight', 'calc(100vh - 60px - 40px - 40px)');
         return {};
       }
     },
@@ -209,7 +214,7 @@ export default {
   }
 
   .hideSidebar .fixed-header {
-    width: calc(100% - 56px)
+    width: var(--appExportHeight, calc(100% - 56px));
   }
 
   .mobile .fixed-header {

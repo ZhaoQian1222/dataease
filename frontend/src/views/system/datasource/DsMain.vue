@@ -61,6 +61,7 @@ import DsTree from './DsTree'
 import DsForm from './DsForm'
 import dsTable from './dsTable'
 import DriverForm from './DriverFormDetail'
+import '@/dataease.css'
 export default {
   name: 'DsMain',
   components: { DeMainContainer, DeAsideContainer, DsTree },
@@ -148,7 +149,7 @@ export default {
   }
 }
 .ms-aside-container {
-  height: calc(100vh - 56px);
+  height: var(--generalHeight, calc(100vh - 56px));
   padding: 0px;
   min-width: 260px;
   max-width: 460px;
@@ -161,7 +162,7 @@ export default {
   align-content: center;
 }
 .is-driver-mgm {
-  height: calc(100vh - 56px);
+  height: var(--generalHeight, calc(100vh - 56px));
   background-color: var(--MainBG, #f5f6f7);
   padding: 24px;
   flex-wrap: wrap;

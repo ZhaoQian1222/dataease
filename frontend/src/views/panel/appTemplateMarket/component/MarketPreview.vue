@@ -96,6 +96,7 @@ import TemplateMarketPreviewItem from '@/views/panel/appTemplateMarket/component
 import AppTemplateLog from '@/views/panel/appTemplateMarket/log'
 import { listDatasourceType } from '@/api/system/datasource'
 import DsAppForm from '@/views/system/datasource/DsAppForm'
+import '@/dataease.css'
 
 export default {
   name: 'MarketPreview',
@@ -349,7 +350,7 @@ export default {
 
 .aside-active {
   width: 206px;
-  height: calc(100vh - 56px);
+  height: var(--generalHeight, calc(100vh - 56px));
   overflow-x: hidden;
   overflow-y: auto;
   background-color: var(--ContentBG,#ffffff);
@@ -368,7 +369,7 @@ export default {
   width: 100%;
   padding:24px;
   text-align: center;
-  height: calc(100vh - 56px);
+  height: var(--generalHeight, calc(100vh - 56px));
   transition: 0.5s;
 }
 
@@ -505,7 +506,7 @@ export default {
 
 .preview-outer-body{
   width: 100%;
-  height: calc(100vh - 56px);
+  height: var(--generalHeight, calc(100vh - 56px));
   background-color: var(--MainBG,#f5f6f7);
 }
 

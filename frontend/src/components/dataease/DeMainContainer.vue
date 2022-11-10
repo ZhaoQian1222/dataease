@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import '@/dataease.css'
 export default {
   name: 'DeMainContainer'
 }
@@ -14,7 +15,7 @@ export default {
 
   .ms-main-container {
     padding: 10px;
-    height: calc(100vh - 56px);
+    height: var(--generalHeight, calc(100vh - 56px));
   }
 
 </style>

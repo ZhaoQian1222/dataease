@@ -71,6 +71,7 @@ import AddUnion from '@/views/dataset/add/AddUnion'
 import { post } from '@/api/dataset/dataset'
 import { datasetTypeMap } from './group/options'
 import msgCfm from '@/components/msgCfm/index'
+import '@/dataease.css'
 export default {
   name: 'DatasetForm',
   components: { AddDB, AddSQL, AddExcel, AddApi, AddUnion },
@@ -302,7 +303,7 @@ export default {
 
   .container {
     width: 100%;
-    height: calc(100vh - 56px);
+    height: var(--generalHeight, calc(100vh - 56px));
   }
 }
 

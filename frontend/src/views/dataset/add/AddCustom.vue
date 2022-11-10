@@ -108,6 +108,7 @@
 import { post, getTable } from '@/api/dataset/dataset'
 import DatasetGroupSelector from '../common/DatasetGroupSelector'
 import DatasetCustomField from '../common/DatasetCustomField'
+import '@/dataease.css'
 
 export default {
   name: 'AddCustom',
@@ -326,11 +327,11 @@ export default {
   }
 
   .panel-height{
-    height: calc(100vh - 56px - 15px - 26px - 25px - 43px);
+    height: var(--panelHeight, calc(100vh - 56px - 15px - 26px - 25px - 43px));
   }
 
   .blackTheme .panel-height{
-    height: calc(100vh - 56px - 15px - 26px - 25px - 43px);
+    height: var(--panelHeight, calc(100vh - 56px - 15px - 26px - 25px - 43px));
     border-color: var(--TableBorderColor) !important;
   }
 

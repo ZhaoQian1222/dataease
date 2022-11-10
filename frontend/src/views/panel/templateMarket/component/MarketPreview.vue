@@ -117,6 +117,7 @@ import { searchMarket, getCategories } from '@/api/templateMarket'
 import { groupTree } from '@/api/panel/panel'
 import { DEFAULT_COMMON_CANVAS_STYLE_STRING } from '@/views/panel/panel'
 import TemplateMarketPreviewItem from '@/views/panel/templateMarket/component/TemplateMarketPreviewItem'
+import '@/dataease.css'
 
 export default {
   name: 'MarketPreview',
@@ -287,7 +288,7 @@ export default {
   box-shadow: 0 0 2px 0 rgba(31, 31, 31, 0.15), 0 1px 2px 0 rgba(31, 31, 31, 0.15);
   border: solid 2px #fff;
   padding-bottom: 24px;
-  min-height: calc(100vh - 190px);
+  min-height: var(--marketHeight, calc(100vh - 190px));
 }
 
 .market-main {
@@ -349,7 +350,7 @@ export default {
 
 .aside-active {
   width: 206px;
-  height: calc(100vh - 56px);
+  height: var(--generalHeight, calc(100vh - 56px));
   overflow-x: hidden;
   overflow-y: auto;
   background-color: var(--ContentBG,#ffffff);
@@ -368,7 +369,7 @@ export default {
   width: 100%;
   padding:24px;
   text-align: center;
-  height: calc(100vh - 56px);
+  height: var(--generalHeight, calc(100vh - 56px));
   transition: 0.5s;
 }
 
