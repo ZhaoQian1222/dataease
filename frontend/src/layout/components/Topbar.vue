@@ -72,7 +72,7 @@
           <span style="max-width:80px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;">{{ name }}</span>
 <!--          <span><i class="el-icon-arrow-down el-icon&#45;&#45;right" /></span>-->
         </div>
-<!--        <el-dropdown-menu slot="dropdown">-->
+        <el-dropdown-menu slot="dropdown">
 <!--          <router-link to="/person-info/index">-->
 <!--            <el-dropdown-item>{{ $t('commons.personal_info') }}</el-dropdown-item>-->
 <!--          </router-link>-->
@@ -97,7 +97,7 @@
 <!--          >-->
 <!--            <span style="display:block;">{{ $t('commons.exit_system') }}</span>-->
 <!--          </el-dropdown-item>-->
-<!--        </el-dropdown-menu>-->
+        </el-dropdown-menu>
       </el-dropdown>
     </div>
 
